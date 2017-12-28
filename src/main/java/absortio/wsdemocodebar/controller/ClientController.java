@@ -11,12 +11,18 @@ import java.util.Collection;
 
 @RestController
 public class ClientController {
+
     @Autowired
     ClientService clientService;
 
     @GetMapping("/finddni/{dni}")
-    public Collection<Client> getAllUsuario(@PathVariable String dni) {
+    public Collection<Client> getUsuario(@PathVariable String dni) {
         return clientService.findByDni(dni);
     }
+    @GetMapping("/finddn")
+    public Collection<Client> getAllUsuario() {
+        return clientService.findAllClient();
+    }
+
 
 }

@@ -1,7 +1,7 @@
 package absortio.wsdemocodebar.model;
 
-import javax.persistence.*;
 
+import javax.persistence.*;
 @Entity(name = "ClientModel")
 @Table(name = "client")
 public class Client {
